@@ -9,11 +9,16 @@ class UniLaravelServiceProvider extends ServiceProvider
 
 	public function boot()
 	{
-		dd('rfe');
+		$this->publishes([
+			__DIR__ . '/../config/uni.php' => config_path('uni.php')
+		]);
 	}
 
 	public function register()
 	{
-
+		$this->app->singleton('uni-laravel', function () {
+			return new Uni;
+		});
+		$this->app->alias('uni-laravel', Uni::class);
 	}
 }

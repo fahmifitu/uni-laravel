@@ -8,7 +8,9 @@
             "email": "fahmi.fitu@gmail.com"
         }
     ],
-    "require": {},
+    "require": {
+        "guzzlehttp/guzzle": "^6.5"
+    },
     "autoload": {
         "psr-4": {
             "fahmifitu\\UniLaravel\\": "src/"
@@ -18,7 +20,10 @@
         "laravel": {
             "providers": [
                 "fahmifitu\\UniLaravel\\UniLaravelServiceProvider"
-            ]
+            ],
+            "aliases": {
+                "Uni": "fahmifitu\\UniLaravel\\Facades\\Uni"
+            }
         }
     }
 }
