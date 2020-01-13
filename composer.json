@@ -1,0 +1,24 @@
+{
+    "name": "fahmifitu/uni-laravel",
+    "description": "Laravel wrapper package for Uni API.",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Fahmi Elfituri",
+            "email": "fahmi.fitu@gmail.com"
+        }
+    ],
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "fahmifitu\\UniLaravel\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "fahmifitu\\UniLaravel\\UniLaravelServiceProvider"
+            ]
+        }
+    }
+}
